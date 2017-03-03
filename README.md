@@ -1,5 +1,7 @@
 # jekyll-theme-materialize
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+
 ## 安装
 
 添加下行到你 Jekyll 的 `Gemfile`文件中:
@@ -47,8 +49,8 @@ theme-color: {
 } 
 
 # mobile nav
-mobile-hp: /images/tx.jpg
-mobile-bg: /images/userbg.png
+mobile-hp: /images/tx.jpg       # 头像
+mobile-bg: /images/userbg.png   # 背景
 ```
 每一个新的文章均需要添加如下yaml:
 
