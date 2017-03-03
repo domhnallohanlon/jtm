@@ -1,0 +1,20 @@
+<footer class="page-footer {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %}">
+
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">{{ site.title }}</h5>
+                <ul>
+                    <li></li>
+                    <li><a href="mailto:{{ site.email }}" class="grey-text text-lighten-4">{{ site.email }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016-2017 KeJun, Powered by <a class="white-text" href="https://jekyllrb.com/">Jekyll</a>, All rights reserved.
+            <a class="grey-text text-lighten-4 right" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+        </div>
+    </div>
+</footer>

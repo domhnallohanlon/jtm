@@ -1,0 +1,40 @@
+  body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+  }
+  
+  main {
+      flex: 1 0 auto;
+  }
+  
+  input[type=search] {
+      border-bottom: 0px!important;
+  }
+  
+  .fixed-action-btn {
+      z-index: 1;
+  }
+  
+  .page-footer {
+      z-index: 2;
+  }
+  
+  ::-webkit-scrollbar {
+      display: none
+  }
+  
+  .linkTitle {
+      margin: 0px 0px;
+      font-size: 2em;
+  }
+  
+  .linkCard {
+      max-height: 100px;
+      height: 100px;
+      padding: 10px 10px;
+  }
+  
+  .linkContent {
+      height: 100%;
+  }

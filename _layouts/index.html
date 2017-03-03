@@ -1,0 +1,72 @@
+--- 
+layout: default 
+---
+<br>
+
+<!--遍历要显示的文章-->
+<div class="b e">
+    {% for post in site.posts %}
+    {% unless post.image %}
+        <div class="d hx hf gu gallery-item gallery-expand {{post.categories}} ce"><div class="placeholder">
+            <div class="gallery-curve-wrapper">
+              <div class="gallery-header">
+                <span>{{ post.title }}</span>
+                <p class="gray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+                <hr>
+                <div id="postsContent">
+                {{ post.excerpt }}
+                </div>
+              </div>
+              <div class="gallery-body">
+                <div id="postsContent" class="title-wrapper">
+                  <h1>{{ post.title }}</h1>
+                </div>
+                <div id="postsContent">
+                    {{ post.content }}
+                </div>
+              </div>
+              <div class="gallery-action">
+                <!--<a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">favorite</i></a>-->
+              </div>
+            </div>
+          </div>
+        </div>
+    {% else %}
+    <div class="d hx hf gu gallery-item gallery-expand {{post.categories}} ce" data-fillscreen="true">
+        <div class="placeholder">
+            <div class="gallery-curve-wrapper">
+                <a class="gallery-cover gray" style="height: 300px;">
+                    <img src="{{ post.image }}" crossorigin="anonymous" alt="placeholder">
+                    <div class="gradient"></div>
+                </a>
+                <div class="gallery-header">
+                    <span>{{post.title}}</span>
+                    <p class="post-data datagray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+                </div>
+                <div class="gallery-body">
+                    <div id="postsContent" class="title-wrapper">
+                        <h1>{{post.title}}</h1>
+                    </div>
+                    <div id="postsContent">
+                    {{ post.content }}
+                    </div>
+                </div>
+                <div class="gallery-action">
+                    <!--<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endunless %}
+    {% endfor %}
+</div>
+
+<style>
+    /*.highlight{
+        border-left: 3px solid rgb(183, 160, 134)!important;
+        box-shadow: -1px 0px 0px 0px rgb(183, 160, 134), 0px 0px 0px 1px rgb(183, 160, 134)!important;
+    }*/
+    .post-data{
+        margin-bottom: 0px;
+    }
+</style>

@@ -1,0 +1,110 @@
+<!-- 菜单和header -->
+<nav class="nav-extended {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %}">
+  <div class="nav-background">
+    <div class="ea k" style="background-image: url('{{ "/images/bg.png" | prepend: site.baseurl }}');"></div>
+  </div>
+  <div class="nav-wrapper db">
+    <!--移动端菜单按钮-->
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!--页面的导航-->
+    <ul class="bt hide-on-med-and-down">
+      {% assign a = page.url | remove:'.html' | append:'.html' %} {% if page.url == a %}
+      <li>
+        <a href="{{ site.url }}">Home</a>
+      </li>
+      {% else %}
+      <li class="k">
+        <a href="{{ site.url }}">Home</a>
+      </li>
+      {% endif %} {% for my_page in site.pages %} {% if my_page.title %} {% if page.url == my_page.url %}
+      <li class="k">
+        <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      </li>
+      {% endif %} {% endif %} {% endfor %}
+    </ul>
+    <!--页面的标题-->
+    <div class="nav-header de">
+      {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+      <h1>{{ site.title | upcase }}</h1>
+      <div class="ge">{{ site.description }}</div>
+      {% endif %} {% endfor %} {% if page.url == a %}
+      <h1>{{ page.title | upcase}}</h1>
+      {% unless page.describe %}
+      <div class="ge">{{ page.date | date: "%b %-d, %Y" }}</div>
+      {% else %}
+      <div class="ge">{{ page.describe }}</div>
+      {% endunless %}
+      {% else %}
+      <h1>{{ site.title | upcase }}</h1>
+      <div class="ge">{{ site.description }}</div>
+      {% endif %}
+    </div>
+  </div>
+  <!-- 页面内的导航 -->
+  {% if page.url != a %}
+  <div class="categories-wrapper {% case page.url %}{% when '/' %}green{% when '/about.html' %}red{% when '/archive.html' %}pink{% when '/links.html' %}purple{% when '/tags.html' %}blue{% else %}green{% endcase %} darken-1">
+    <div class="categories-container">
+      <ul class="categories db">
+        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
+        {% for category in site.categories %}
+        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ category | last | size }}篇文章" href="#{{ category | first }}">{{ category | first }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  {% if page.url == "/archive.html" %}
+  <div class="categories-wrapper {% case page.url %}{% when '/' %}green{% when '/about.html' %}red{% when '/archive.html' %}pink{% when '/links.html' %}purple{% when '/tags.html' %}blue{% else %}green{% endcase %} darken-1">
+    <div class="categories-container">
+      <ul class="categories db">
+        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
+  {% for post in site.posts %}
+    {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+    {% capture x %}{{post | size }}{% endcapture %}
+    {% if year != y %}
+    {% assign year = y %}
+        
+        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ post | size }}篇文章" href="#{{ y }}">{{ y }}</a></li>
+
+    {% endif %}
+
+  {% endfor %}
+        </ul>
+    </div>
+  </div>
+  {% endif %}
+</nav>
+<!--移动端nav-->
+<ul id="slide-out" class="side-nav">
+  <li>
+    <div class="userView">
+      <div class="background">
+              <img style="width:300px;height:160px;" src="{{ "/images/userbg.png" | prepend: site.baseurl }}">
+            </div>
+      <a href="{{ site.baseurl }}/"><img class="circle" src="{{ "/images/tx.jpg" | prepend: site.baseurl }}"></a>
+      <a href="#!"><span class="white-text name">{{ site.title }}</span></a>
+      <a href="mailto:{{ site.email }}"><span class="white-text email">{{ site.email }}</span></a>
+    </div>
+  </li>
+  <form>
+    <div class="input-field">
+      <input id="search" type="search" required>
+      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      <i class="material-icons">close</i>
+    </div>
+  </form>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><a class="subheader">Pages</a></li>
+  {% for my_page in site.pages %} {% if my_page.title %}
+  <li><a class="waves-effect" data-position="right" data-delay="50" data-tooltip="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+  {% endif %} {% endfor %}
+  <li>
+    <div class="divider"></div>
+  </li>
+</ul>

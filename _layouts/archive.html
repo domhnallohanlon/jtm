@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<br>
+<div class="b e">
+    {% for post in site.posts %}
+    {% unless post.image %}
+        <div class="d hx hf gu gallery-item gallery-expand 
+            {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+            {% assign year = y %}
+            {{ y }}
+         ce"><div class="placeholder">
+            <div class="gallery-curve-wrapper">
+              <div class="gallery-header">
+                <span>{{ post.title }}</span>
+                <p class="gray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+                <hr>
+                <div id="postsContent">{{ post.excerpt }}</div>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>{{ post.title }}</h3>
+                </div>
+                <div id="postsContent">
+                    {{ post.content }}
+                </div>
+              </div>
+              <div class="gallery-action">
+                <!--<a class="btn-floating btn-large waves-effect waves-light pink"><i class="material-icons">favorite</i></a>-->
+              </div>
+            </div>
+          </div>
+        </div>
+    {% else %}
+    <div class="d hx hf gu gallery-item gallery-expand 
+            {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+            {% assign year = y %}
+            {{ y }}
+     ce" data-fillscreen="true">
+        <div class="placeholder">
+            <div class="gallery-curve-wrapper">
+                <a class="gallery-cover gray" style="height: 300px;">
+                    <img src="{{ post.image }}" crossorigin="anonymous" alt="placeholder">
+                    <div class="gradient"></div>
+                </a>
+                <div class="gallery-header">
+                    <span>{{post.title}}</span>
+                    <p class="post-data datagray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+                </div>
+                <div class="gallery-body">
+                    <div id="postsContent" class="title-wrapper">
+                        <h3>{{post.title}}</h3>
+                    </div>
+                    <div id="postsContent">
+                    {{ post.content }}
+                    </div>
+                </div>
+                <div class="gallery-action">
+                    <!--<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endunless %}
+    {% endfor %}
+</div>
