@@ -1,38 +1,74 @@
 # jekyll-theme-materialize
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+## 安装
 
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
+添加下行到你 Jekyll 的 `Gemfile`文件中:
 
 ```ruby
 gem "jekyll-theme-materialize"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+添加下行到你 Jekyll 的`_config.yml`文件中 :
 
 ```yaml
 theme: jekyll-theme-materialize
 ```
 
-And then execute:
+然后执行:
 
     $ bundle
 
-Or install it yourself as:
+或手动执行:
 
     $ gem install jekyll-theme-materialize
 
-## Usage
+## 用法
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+将如下内容添加到你Jekyll 的`_config.yml`文件中，请注意替换为你自己的信息：
 
-## Contributing
+```yaml
+title: KeJun | BLOG
+email: kejun1997@gmail.com
+description: 二次元智障
+url: "https://blog.kejun.tk/" 
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+# icon
+icon-16x16: images/icon/favicon-16x16.ico
+icon-32x32: images/icon/favicon-32x32.ico
+
+# theme color
+theme-color: { 
+  default-color: green, 
+  home-color: green,
+  about-color: red,
+  archive-color: pink,
+  links-color: purple,
+  tags-color: blue
+} 
+
+# mobile nav
+mobile-hp: /images/tx.jpg
+mobile-bg: /images/userbg.png
+```
+每一个新的文章均需要添加如下yaml:
+
+```yaml
+---
+layout: post        # 指定模板
+categories: NoImage # 分类，首页显示
+image:              # 图像，用于首页，若留空将以NoImage的形式显示
+tags: jekyll ubuntu # 标签，用于tags页面，允许多个
+---
+```
+
+友情链接在`_data/links.yml`中，要删除或新增，请遵循如下格式：
+
+```yaml
+- name: Halyul
+  image: images/links/halyul.png
+  url: https://halyul.com/
+  describe: Material Design爱好者
+```
 
 ## Development
 
@@ -45,4 +81,3 @@ When your theme is released, only the files in `_layouts`, `_includes`, and `_sa
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-

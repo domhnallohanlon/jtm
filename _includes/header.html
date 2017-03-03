@@ -10,11 +10,11 @@
     <ul class="bt hide-on-med-and-down">
       {% assign a = page.url | remove:'.html' | append:'.html' %} {% if page.url == a %}
       <li>
-        <a href="{{ site.url }}">Home</a>
+        <a href="{{ site.baseurl }}/">Home</a>
       </li>
       {% else %}
       <li class="k">
-        <a href="{{ site.url }}">Home</a>
+        <a href="{{ site.baseurl }}/">Home</a>
       </li>
       {% endif %} {% for my_page in site.pages %} {% if my_page.title %} {% if page.url == my_page.url %}
       <li class="k">
@@ -83,9 +83,9 @@
   <li>
     <div class="userView">
       <div class="background">
-              <img style="width:300px;height:160px;" src="{{ "/images/userbg.png" | prepend: site.baseurl }}">
+              <img style="width:300px;height:160px;" src="{{ site.mobile-bg | prepend: site.baseurl }}">
             </div>
-      <a href="{{ site.baseurl }}/"><img class="circle" src="{{ "/images/tx.jpg" | prepend: site.baseurl }}"></a>
+      <a href="{{ site.baseurl }}/"><img class="circle" src="{{ site.mobile-hp | prepend: site.baseurl }}"></a>
       <a href="#!"><span class="white-text name">{{ site.title }}</span></a>
       <a href="mailto:{{ site.email }}"><span class="white-text email">{{ site.email }}</span></a>
     </div>
