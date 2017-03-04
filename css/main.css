@@ -33,6 +33,7 @@
       max-height: 100px;
       height: 100px;
       padding: 10px 10px;
+      min-width: 272px;
   }
   
   .linkContent {

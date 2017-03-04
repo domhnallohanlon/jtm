@@ -36,7 +36,7 @@ layout: default
         <div class="placeholder">
             <div class="gallery-curve-wrapper">
                 <a class="gallery-cover gray" style="height: 300px;">
-                    <img src="{{ post.image | prepend: site.baseurl }}" crossorigin="anonymous" alt="placeholder">
+                    <img class="lazy" data-original="{{ post.image | prepend: site.baseurl }}" src="" crossorigin="anonymous" alt="placeholder">
                     <div class="gradient"></div>
                 </a>
                 <div class="gallery-header">

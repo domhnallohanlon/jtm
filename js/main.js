@@ -70,4 +70,6 @@ $(document).ready(function () {
   if($(".gallery-expand").css("background-color") == undefined){
     $('#postsContent img').materialbox();
   }
+  //lazyload images
+  $("img.lazy").lazyload();
 });
