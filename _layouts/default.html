@@ -7,8 +7,16 @@
 
     {% include header.html %}
 
+    {% unless page.toc %}
+
     {% include main.html %}
 
+    {% else%}
+
+    {% include postmain.html %}
+
+    {% endunless %}
+    
     {% include footer.html %}
 
     {% include script.html %}

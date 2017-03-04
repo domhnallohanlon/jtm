@@ -43,3 +43,11 @@
   .linkContent {
       height: 100%;
   }
+
+    .lazy{
+        display: none
+    };
+    div.center.gradient{
+        height: 100%;
+        line-height: 22
+    }

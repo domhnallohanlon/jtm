@@ -70,8 +70,24 @@ $(document).ready(function () {
   if($(".gallery-expand").css("background-color") == undefined){
     $('#postsContent img').materialbox();
   }
+  $("img.lazy").load(function(){
+    $(this).next().css({
+      "display":"none"
+    })
+  })
   //lazyload images
   $("img.lazy").lazyload({
-    effect : "fadeIn"
+    effect : "fadeIn",
+    threshold : 0
   });
+  //toc
+   $('#toc').toc();
+   $('.toc-wrapper').pushpin({
+        top: 320,
+        bottom: 999999,
+        offset: 0
+    });
+  if($('#toc').css("display") == "none"){
+    $("div.toc").removeClass( "m9 l10" );
+  }
 });

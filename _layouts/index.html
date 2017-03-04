@@ -36,8 +36,22 @@ layout: default
         <div class="placeholder">
             <div class="gallery-curve-wrapper">
                 <a class="gallery-cover gray" style="height: 300px;">
-                    <img class="lazy" data-original="{{ post.image | prepend: site.baseurl }}" src="" crossorigin="anonymous" alt="placeholder">
-                    <div class="gradient"></div>
+                    <img class="lazy" data-original="{{ post.image | prepend: site.baseurl }}" src="" crossorigin="anonymous" alt=" ">
+                    <div class="center gradient">
+                        <div class="preloader-wrapper small active">
+                            <div class="spinner-layer spinner-green-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </a>
                 <div class="gallery-header">
                     <span>{{post.title}}</span>
@@ -60,13 +74,3 @@ layout: default
     {% endunless %}
     {% endfor %}
 </div>
-
-<style>
-    /*.highlight{
-        border-left: 3px solid rgb(183, 160, 134)!important;
-        box-shadow: -1px 0px 0px 0px rgb(183, 160, 134), 0px 0px 0px 1px rgb(183, 160, 134)!important;
-    }*/
-    .post-data{
-        margin-bottom: 0px;
-    }
-</style>
