@@ -109,7 +109,7 @@ GFM a-tail link @pandao
 
 ![]( {{ site.mobile-hp | prepend: site.baseurl }} )
 
-> 图为：李健首张专辑《似水流年》封面
+> 图为：我的头像
                 
 ----
 

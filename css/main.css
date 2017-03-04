@@ -23,6 +23,10 @@
   ::-webkit-scrollbar {
       display: none
   }
+
+    .post-data{
+      margin-bottom: 0px;
+    }
   
   .linkTitle {
       margin: 0px 0px;

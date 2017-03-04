@@ -71,5 +71,7 @@ $(document).ready(function () {
     $('#postsContent img').materialbox();
   }
   //lazyload images
-  $("img.lazy").lazyload();
+  $("img.lazy").lazyload({
+    effect : "fadeIn"
+  });
 });

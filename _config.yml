@@ -30,3 +30,5 @@ mobile-bg: /images/userbg.png
 
 # Build settings
 markdown: kramdown
+
+exclude: [vendor]
