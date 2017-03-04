@@ -51,6 +51,9 @@ theme-color: {
 # mobile nav
 mobile-hp: /images/tx.jpg       # 头像
 mobile-bg: /images/userbg.png   # 背景
+
+# disqus
+disqus-shortname: blog-kejun-tk #disqus shortname
 ```
 每一个新的文章均需要添加如下yaml:
 
@@ -60,27 +63,34 @@ layout: post        # 指定模板
 categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。
 image:              # 图像，用于首页，若留空将以NoImage的形式显示
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
-toc: *           # 确定是否显示toc目录，默认为不显示。
+toc: *              # 确定是否显示toc目录，默认为不显示。
+comments: true      # 是否显示评论
 ---
 ```
 
 如需新增page，建议按：
 
 * 根目录新建 `pageName.md`,并在头信息中键入如下：
+
 ```yaml
 ---
 title: pageName         # 标题
 layout: pageName        # 模板,建议为标题或文件名，若以文章形式输出，layout 填写 about 并编辑该.md文件即可，无需下一步 。
 describe: pageName page # 描述
+toc: *                  # 确定是否显示toc目录。
+comments: true          # 是否显示评论
 ---
 ```
+
 * 在`_layout`目录下新建`pageName.html`，并键入如下：
+
 ```yaml
 --- 
 layout: default 
 ---
 ```
-  这样你就成功引入了`head`，`header`，`main`，`script`，`footer`。然后编辑刚刚新建的`pageName.html`即可添加自定义`html`。
+
+这样你就成功引入了`head`，`header`，`main`，`script`，`footer`。然后编辑刚刚新建的`pageName.html`即可添加自定义`html`。
 
 > 你新增的页面将以`_config.yml`文件中的 `default-color` 作为主题色。如果你知道你在干什么，你也可以编辑`header`和`footer`。
 
@@ -111,7 +121,7 @@ layout: default
 
 ## TODO
 
-* disqus     # 评论系统
+* disqus     # 完成,努力实现home和archive评论
 * toc        # 完成
 * 图像加载动画 # 完成
 * 二次元化选项 # 二次元最棒惹～

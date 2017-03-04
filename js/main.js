@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   //scrollToTop
   $("#toTop").scrollToTop();
@@ -90,4 +91,20 @@ $(document).ready(function () {
   if($('#toc').css("display") == "none"){
     $("div.toc").removeClass( "m9 l10" );
   }
+
 });
+// 评论
+var disqus = {
+  load : function disqus(){
+      var disqus_shortname = $("#load-disqus").attr("data");
+      if(typeof DISQUS !== 'object') {
+        (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        $('#load-disqus').remove(); ///加载后移除按钮
+      }
+  }
+}

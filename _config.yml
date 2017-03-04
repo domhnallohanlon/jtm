@@ -28,6 +28,9 @@ theme-color: {
 mobile-hp: /images/tx.jpg
 mobile-bg: /images/userbg.png
 
+# disqus
+disqus-shortname: blog-kejun-tk
+
 # Build settings
 markdown: kramdown
 
