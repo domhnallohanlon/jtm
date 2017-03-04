@@ -63,6 +63,26 @@ tags: jekyll ubuntu # 标签，用于tags页面，允许多个
 ---
 ```
 
+如需新增page，建议按：
+
+1. 根目录新建 `pageName.md`,并在头信息中键入如下：
+```yaml
+---
+title: pageName         # 标题
+layout: pageName        # 模板,建议为标题或文件名，若以文章形式输出，layout 填写 about 并编辑该.md文件即可，无需下一步 。
+describe: pageName page # 描述
+---
+```
+2. 在`_layout`目录下新建`pageName.html`，并键入如下：
+```yaml
+--- 
+layout: default 
+---
+```
+  这样你就成功引入了`head`，`header`，`main`，`script`，`footer`。然后编辑刚刚新建的`pageName.html`即可添加自定义`html`。
+
+> 你新增的页面将以`_config.yml`文件中的 `default-color` 作为主题色。如果你知道你在干什么，你也可以编辑`header`和`footer`。
+
 友情链接在`_data/links.yml`中，要删除或新增，请遵循如下格式：
 
 ```yaml
@@ -71,6 +91,23 @@ tags: jekyll ubuntu # 标签，用于tags页面，允许多个
   url: https://halyul.com/
   describe: Material Design爱好者
 ```
+
+## 注意
+
+该主题引用的`gallery.min.opt.js`及`gallery-materialize.min.opt.css`文件并没有经过原开发者同意。若侵权，请告知并删除。
+
+你可以在`main.js`中自定义首页文章的GalleryExpand效果：
+
+| Option  | Description |
+| ------------- | ------------- |
+|inDuration	| Transition duration for opening the gallery in ms. Default: 300|
+|outDuration |	Transition duration for closing the gallery in ms. Default: 200|
+|responsiveThreshold |	Breakpoint for full width style in pixels. Default: 992|
+|contentPadding |	Padding for content in the gallery in pixels. Default: 40|
+|onShow |	Callback function that is fired when the gallery is opened.|
+|defaultColor |	Fallback color for when color thief fails. Default: '#444'|
+|fillScreen |	Enable the full width image transition style. Default: false|
+
 
 ## Development
 
