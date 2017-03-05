@@ -8,9 +8,10 @@ tags: test
 toc: a  #可填写任意内容
 comments: true
 ---
-# jekyll-theme-materialize
+[coding page](http://KeJun.coding.me/jekyll-theme-materialize-site/)
+[github page](https://kejunmao.github.io/jekyll-theme-materialize-site/)
 
-[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)[![Gem Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+# jekyll-theme-materialize
 
 ## 安装
 

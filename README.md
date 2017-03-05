@@ -1,19 +1,34 @@
 # jekyll-theme-materialize
 
-[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)[![Gem Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+travis-ci:[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
+
+jekyll-theme-materialize:[![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+
+jekyll-lunr-js-search:[![jekyll-lunr-js-search Version](https://badge.fury.io/rb/jekyll-lunr-js-search.svg)](https://badge.fury.io/rb/jekyll-lunr-js-search)
+
+## 预览
+
+[coding page（中国）](http://KeJun.coding.me/jekyll-theme-materialize-site/)
+[github page](https://kejunmao.github.io/jekyll-theme-materialize-site/)
 
 ## 安装
 
 添加下行到你 Jekyll 的 `Gemfile`文件中:
 
 ```ruby
+#安装主题
 gem "jekyll-theme-materialize"
+#安装搜索依赖
+gem "jekyll-lunr-js-search"
 ```
 
 添加下行到你 Jekyll 的`_config.yml`文件中 :
 
 ```yaml
+#启用主题
 theme: jekyll-theme-materialize
+#启用搜索
+gems: ['jekyll-lunr-js-search']
 ```
 
 然后执行:
@@ -50,7 +65,7 @@ theme-color: {
 
 # mobile nav
 mobile-hp: /images/tx.jpg       # 头像
-mobile-bg: /images/userbg.png   # 背景
+mobile-bg: /images/userbg.png   # 背景,若填写theme则使用主题色。
 
 # disqus
 disqus-shortname: blog-kejun-tk #disqus shortname
@@ -103,6 +118,16 @@ layout: default
   describe: Material Design爱好者
 ```
 
+footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即可，！请勿更改name！：
+
+```yaml
+- name: github
+  url: http://gihub.com
+```
+
+若想要自定义顺序，你可以调整他们的整体顺序。
+
+
 ## 注意
 
 该主题引用的`gallery.min.opt.js`及`gallery-materialize.min.opt.css`文件并没有经过原开发者同意。若侵权，请告知并删除。
@@ -125,15 +150,7 @@ layout: default
 * toc        # 完成
 * 图像加载动画 # 完成
 * 二次元化选项 # 二次元最棒惹～
-* 搜索        # 添加搜索插件（仅支持英文），若需自定义，请访问：https://github.com/slashdotdash/jekyll-lunr-js-search
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+* 搜索        # 完成（仅支持英文），若需自定义，请访问：https://github.com/slashdotdash/jekyll-lunr-js-search
 
 ## License
 

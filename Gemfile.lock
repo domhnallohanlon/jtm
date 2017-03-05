@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-materialize (0.0.4)
+    jekyll-theme-materialize (0.0.5)
       jekyll (~> 3.4)
+      jekyll-lunr-js-search (~> 3.2)
 
 GEM
   remote: https://rubygems.org/

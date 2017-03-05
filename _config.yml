@@ -10,7 +10,7 @@ title: KeJun | BLOG
 email: kejun1997@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   二次元智障
-baseurl: "/jekyll-theme-materialize" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-theme-materialize-site" # the subpath of your site, e.g. /blog
 url: "https://blog.kejun.tk/" # the base hostname & protocol for your site
 # icon
 icon-16x16: /images/icon/favicon-16x16.ico
@@ -26,7 +26,7 @@ theme-color: {
 } 
 # mobile nav
 mobile-hp: /images/tx.jpg
-mobile-bg: /images/userbg.png
+mobile-bg: /images/userbg.png #若填写theme-color则使用theme-color的值。
 
 # disqus
 disqus-shortname: blog-kejun-tk

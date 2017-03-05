@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-materialize"
-  spec.version       = "0.0.4"
+  spec.version       = "0.0.5"
   spec.authors       = ["KeJun"]
   spec.email         = ["kejun1997@gmail.com"]
 
   spec.summary       = "jekyll-materializecss-theme"
-  spec.homepage      = "http://kejun.coding.me/jekyll-theme-materialize/"
+  spec.homepage      = "https://kejunmao.github.io/jekyll-theme-materialize-site"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }

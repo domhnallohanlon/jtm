@@ -25,7 +25,17 @@
         <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
       </li>
       {% endif %} {% endif %} {% endfor %}
+      <li class="nav-search">
+          <div class="nav-search-wrapper">
+            <input id="nav-search"><i class="search material-icons">search</i>
+            <div id="nav-search-results" class="nav-search-results card">
+
+            </div>
+          </div>
+        </li>
     </ul>
+    <style>
+    </style>
     <!--页面的标题-->
     <div class="nav-header de">
       {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
@@ -81,10 +91,12 @@
 <!--移动端nav-->
 <ul id="slide-out" class="side-nav">
   <li>
-    <div class="userView">
+    <div class="userView {% if site.mobile-bg=="theme-color" %} {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %} {% endif %}">
+      {% if site.mobile-bg != "theme" %}
       <div class="background">
               <img style="width:300px;height:160px;" src="{{ site.mobile-bg | prepend: site.baseurl }}">
-            </div>
+      </div>
+      {% endif %}
       <a href="{{ site.baseurl }}/"><img class="circle" src="{{ site.mobile-hp | prepend: site.baseurl }}"></a>
       <a href="#!"><span class="white-text name">{{ site.title }}</span></a>
       <a href="mailto:{{ site.email }}"><span class="white-text email">{{ site.email }}</span></a>
@@ -117,12 +129,16 @@
     <li>
       <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{#date}}{{pubdate}}{{/date}}" href="{% endraw %}{{ site.baseurl }}{% raw %}{{url}}">{{title}}</a>
     </li>
-        <!--{{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}-->
-      <!--{{#is_post}}
-      <ul>
-        {{#tags}}<li>{{.}} </li>{{/tags}}
-      </ul>
-      {{/is_post}}-->
   {{/entries}}
+</script>
+<script id="search-results-nav" type="text/mustache">
+    <div class="center">
+  {{#entries}}
+   <ul>
+   <li class="post-list"><a class="waves-effect post-list black-text" data-tooltip="{{#date}}{{pubdate}}{{/date}}" href="{% endraw %}{{ site.baseurl }}{% raw %}{{url}}">{{title}}</a></li>
+   </ul>
+    
+  {{/entries}}
+  </div>
 </script>
 {% endraw %}

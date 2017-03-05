@@ -16,5 +16,12 @@
       titleMsg  : '<li><a class="subheader">Search results</a></li>',   // message attached in front of results (can be empty)
       emptyMsg  : '<li><a class="subheader">Nothing found.</a></li>'     // shown message if search returns no results
     });
+      $('#nav-search').lunrSearch({
+      indexUrl  : '{{ "/js/index.json" | prepend: site.baseurl }}',           // url for the .json file containing search index data
+      results   : '#nav-search-results',          // selector for containing search results element
+      template  : '#search-results-nav', // selector for Mustache.js template
+      titleMsg  : '',   // message attached in front of results (can be empty)
+      emptyMsg  : '<li class="post-list"><a class="subheader black-text center">Nothing found.</a></li>'     // shown message if search returns no results
+    });
   });
 </script>
