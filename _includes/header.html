@@ -90,21 +90,39 @@
       <a href="mailto:{{ site.email }}"><span class="white-text email">{{ site.email }}</span></a>
     </div>
   </li>
-  <form>
+  <form action="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" method="get">
     <div class="input-field">
-      <input id="search" type="search" required>
+      <!--<input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">-->
+      <input id="search-query" type="search" required name="q" placeholder="Search" autocomplete="off">
       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
       <i class="material-icons">close</i>
     </div>
   </form>
+  <section id="search-results" style="display: none;"> </section>
   <li>
     <div class="divider"></div>
   </li>
   <li><a class="subheader">Pages</a></li>
   {% for my_page in site.pages %} {% if my_page.title %}
-  <li><a class="waves-effect" data-position="right" data-delay="50" data-tooltip="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+  <li><a class="waves-effect tooltipped" data-position="right" data-delay="50" data-tooltip="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
   {% endif %} {% endfor %}
   <li>
     <div class="divider"></div>
   </li>
 </ul>
+
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <li>
+      <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{#date}}{{pubdate}}{{/date}}" href="{% endraw %}{{ site.baseurl }}{% raw %}{{url}}">{{title}}</a>
+    </li>
+        <!--{{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}-->
+      <!--{{#is_post}}
+      <ul>
+        {{#tags}}<li>{{.}} </li>{{/tags}}
+      </ul>
+      {{/is_post}}-->
+  {{/entries}}
+</script>
+{% endraw %}

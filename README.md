@@ -125,6 +125,7 @@ layout: default
 * toc        # 完成
 * 图像加载动画 # 完成
 * 二次元化选项 # 二次元最棒惹～
+* 搜索        # 添加搜索插件（仅支持英文），若需自定义，请访问：https://github.com/slashdotdash/jekyll-lunr-js-search
 
 ## Development
 

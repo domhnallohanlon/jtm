@@ -1,7 +1,20 @@
+
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="{{ "/js/search.min.js" | prepend: site.baseurl }}" ></script>
 <script type="text/javascript" src="{{ "/js/materialize.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/jquery.scrollToTop.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/gallery.min.opt.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/jquery.lazyload.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/toc.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#search-query').lunrSearch({
+      indexUrl  : '{{ "/js/index.json" | prepend: site.baseurl }}',           // url for the .json file containing search index data
+      results   : '#search-results',          // selector for containing search results element
+      template  : '#search-results-template', // selector for Mustache.js template
+      titleMsg  : '<li><a class="subheader">Search results</a></li>',   // message attached in front of results (can be empty)
+      emptyMsg  : '<li><a class="subheader">Nothing found.</a></li>'     // shown message if search returns no results
+    });
+  });
+</script>

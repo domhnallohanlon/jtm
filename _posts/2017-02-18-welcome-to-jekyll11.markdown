@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "中文"
 date:   2017-1-18 17:42:06 +0800
 categories: KeJun
 image: /images/demo1.jpg

@@ -35,3 +35,5 @@ disqus-shortname: blog-kejun-tk
 markdown: kramdown
 
 exclude: [vendor]
+
+gems: ['jekyll-lunr-js-search']

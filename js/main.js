@@ -79,7 +79,7 @@ $(document).ready(function () {
   //lazyload images
   $("img.lazy").lazyload({
     effect : "fadeIn",
-    threshold : 0
+    threshold : 100
   });
   //toc
    $('#toc').toc();
