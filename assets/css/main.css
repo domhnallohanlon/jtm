@@ -88,3 +88,21 @@
     input#nav-search:focus:not([readonly]){
       border-bottom: 1px solid rgba(255, 255, 255, 1);
     }
+
+    .linkIcon{
+    width: 30px;
+    opacity: .60;
+    margin-right: 20px;
+    }
+    .p-linkIcon{
+        line-height: 0px;
+        margin-top: 0px;
+    }
+    .p-date{
+        margin-top: 0px;
+        line-height: 42px;
+        margin-bottom: 0px;
+    }
+    .copyright-row{
+        margin-bottom: 0px;
+    }

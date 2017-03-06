@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-materialize"
-  spec.version       = "0.0.6"
+  spec.version       = "0.0.7"
   spec.authors       = ["KeJun"]
   spec.email         = ["kejun1997@gmail.com"]
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://kejunmao.github.io/jekyll-theme-materialize-site"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_data|fonts|images|js|css|_includes|_sass|LICENSE|README)}i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.4"
   spec.add_runtime_dependency "jekyll-lunr-js-search", "~> 3.2"

@@ -4,7 +4,7 @@
                 <p class="center p-linkIcon">
                     {% for href in site.data.myherfs %}
                     {% if href.url!="" %}
-                <a href="{{ href.url }}"><img class="linkIcon center" src="{{ "/images/footer/footer_ico-" | prepend: site.baseurl }}{{ href.name }}.png" alt=""></a>
+                <a href="{{ href.url }}"><img class="linkIcon center" src="{{ "/assets/images/footer/footer_ico-" | prepend: site.baseurl }}{{ href.name }}.png" alt=""></a>
                     {% endif %}
                     {% endfor %}
                 </p>
@@ -31,21 +31,4 @@
     </div>
 </footer>
 <style>
-    .linkIcon{
-    width: 30px;
-    opacity: .60;
-    margin-right: 20px;
-    }
-    .p-linkIcon{
-        line-height: 0px;
-        margin-top: 0px;
-    }
-    .p-date{
-        margin-top: 0px;
-        line-height: 42px;
-        margin-bottom: 0px;
-    }
-    .copyright-row{
-        margin-bottom: 0px;
-    }
 </style>

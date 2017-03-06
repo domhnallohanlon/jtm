@@ -1,7 +1,7 @@
 <!-- 菜单和header -->
 <nav class="nav-extended {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %}">
   <div class="nav-background">
-    <div class="ea k" style="background-image: url('{{ "/images/bg.png" | prepend: site.baseurl }}');"></div>
+    <div class="ea k" style="background-image: url('{{ "/assets/images/bg.png" | prepend: site.baseurl }}');"></div>
   </div>
   <div class="nav-wrapper db">
     <!--移动端菜单按钮-->
