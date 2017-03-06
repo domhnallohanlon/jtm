@@ -75,13 +75,49 @@ disqus-shortname: blog-kejun-tk #disqus shortname
 ```yaml
 ---
 layout: post        # 指定模板
-categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。
+categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。请注意，每个文章仅支持一个分类。
 image:              # 图像，用于首页，若留空将以NoImage的形式显示
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
 toc: *              # 确定是否显示toc目录，默认为不显示。
 comments: true      # 是否显示评论
 ---
 ```
+
+请注意jekyll根目录下的`.md`文件的`layout`与`_layout`文件下的文件对应.如：
+
+* `index.md`
+
+```yaml
+---
+layout: index
+---
+```
+
+* `links.md`
+
+```yaml
+---
+layout: links
+---
+```
+
+* `tags.md`
+
+```yaml
+---
+layout: tags
+---
+```
+
+* `about.md`
+
+```yaml
+---
+layout: about
+---
+```
+
+* `archive.md`
 
 如需新增page，建议按：
 
