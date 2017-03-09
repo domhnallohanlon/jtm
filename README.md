@@ -1,15 +1,15 @@
 # jekyll-theme-materialize
 
-travis-ci:[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
+[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
 
-jekyll-theme-materialize:[![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+[![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
 
-jekyll-lunr-js-search:[![jekyll-lunr-js-search Version](https://badge.fury.io/rb/jekyll-lunr-js-search.svg)](https://badge.fury.io/rb/jekyll-lunr-js-search)
+[![jekyll-lunr-js-search Version](https://badge.fury.io/rb/jekyll-lunr-js-search.svg)](https://badge.fury.io/rb/jekyll-lunr-js-search)
 
 ## 预览
 
 [coding page（中国）](http://KeJun.coding.me/jekyll-theme-materialize-site/)
-[github page](https://kejunmao.github.io/jekyll-theme-materialize-site/)
+[github page](https://kejunmao.github.io/jekyll-theme-materialize/)
 
 ## 安装
 
