@@ -26,8 +26,6 @@
 ```ruby
 #安装主题
 gem "jekyll-theme-materialize"
-#安装搜索依赖
-gem "jekyll-lunr-js-search"
 ```
 
 添加下行到你 Jekyll 的`_config.yml`文件中 :
@@ -43,6 +41,8 @@ theme: jekyll-theme-materialize
 或手动执行:
 
     $ gem install jekyll-theme-materialize
+
+```
 
 ### 使用git
 
