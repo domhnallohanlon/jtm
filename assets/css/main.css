@@ -60,7 +60,7 @@
     display: block;
     font-size: 16px;
     font-weight: 300;
-    width: 100%;
+    width: 265px;
     height: 45px;
     margin: 0;
     padding: 0 45px 0 15px;
@@ -105,4 +105,13 @@
     }
     .copyright-row{
         margin-bottom: 0px;
+    }
+    .search-strong{
+        font-weight: bold;
+    }
+    .nav-search-wrapper div.card{
+        width: 250px;
+    }
+    .input-field div.card{
+        width: 100%;
     }

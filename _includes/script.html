@@ -1,27 +1,38 @@
-
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="{{ "/js/search.min.js" | prepend: site.baseurl }}" ></script>
 <script type="text/javascript" src="{{ "/assets/js/materialize.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/jquery.scrollToTop.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/gallery.min.opt.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/jquery.lazyload.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/toc.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript">
-  $(function() {
-    $('#search-query').lunrSearch({
-      indexUrl  : '{{ "/js/index.json" | prepend: site.baseurl }}',           // url for the .json file containing search index data
-      results   : '#search-results',          // selector for containing search results element
-      template  : '#search-results-template', // selector for Mustache.js template
-      titleMsg  : '<li><a class="subheader">Search results</a></li>',   // message attached in front of results (can be empty)
-      emptyMsg  : '<li><a class="subheader">Nothing found.</a></li>'     // shown message if search returns no results
+<script type="text/javascript" src="{{ "/assets/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+<!--<script type="text/javascript" src="{{ "/assets/js/cb-search.js" | prepend: site.baseurl }}"></script>-->
+<script>
+   $(document).ready(function () {
+        var time1 = 0;
+        var show = false;
+        var names = new Array(); //文章名字等
+        var urls = new Array(); //文章地址
+        $.getJSON("{{"/assets/cb-search.json"| prepend: site.baseurl}}").done(function (data) {
+            if (data.code == 0) {
+                for (var index in data.data) {
+                    var item = data.data[index];
+                    names.push(item.title);
+                    urls.push(item.url);
+                }
+
+                $(".cb-search-content").typeahead({
+                    source: names,
+
+                    afterSelect: function (item) {
+						$(".cb-search-tool").css("display", "none");
+                        show = false;
+                        window.location.href = (urls[names.indexOf(item)]);
+                        return item;
+                    }
+                });
+            }
+        }).error(function(data, b) { console.log("json解析错误，搜索功能暂不可用，请检查文章title，确保不含有换行等特殊符号"); });
     });
-      $('#nav-search').lunrSearch({
-      indexUrl  : '{{ "/js/index.json" | prepend: site.baseurl }}',           // url for the .json file containing search index data
-      results   : '#nav-search-results',          // selector for containing search results element
-      template  : '#search-results-nav', // selector for Mustache.js template
-      titleMsg  : '',   // message attached in front of results (can be empty)
-      emptyMsg  : '<li class="post-list"><a class="subheader black-text center">Nothing found.</a></li>'     // shown message if search returns no results
-    });
-  });
+
 </script>

@@ -13,6 +13,14 @@ jekyll-lunr-js-search:[![jekyll-lunr-js-search Version](https://badge.fury.io/rb
 
 ## 安装
 
+有两种安装方法，一种是gem安装，另一种是`git clone`。
+
+> 建议您使用git clone的方法安装。
+
+### 使用gem
+
+若使用gem，您需要手动新建一些文件，和文件夹，如`links.md`、`_data`等
+
 添加下行到你 Jekyll 的 `Gemfile`文件中:
 
 ```ruby
@@ -27,9 +35,6 @@ gem "jekyll-lunr-js-search"
 ```yaml
 #启用主题
 theme: jekyll-theme-materialize
-#启用搜索
-gems: ['jekyll-lunr-js-search']
-```
 
 然后执行:
 
@@ -38,6 +43,13 @@ gems: ['jekyll-lunr-js-search']
 或手动执行:
 
     $ gem install jekyll-theme-materialize
+
+### 使用git
+
+  $ git clone https://github.com/KeJunMao/jekyll-theme-materialize.git
+  $ cd jekyll-theme-materialize
+  $ bundle install
+  $ bundle exec jekyll s -w
 
 ## 用法
 
@@ -119,6 +131,12 @@ layout: about
 
 * `archive.md`
 
+```yaml
+---
+layout: archive
+---
+```
+
 如需新增page，建议按：
 
 * 根目录新建 `pageName.md`,并在头信息中键入如下：
@@ -127,7 +145,7 @@ layout: about
 ---
 title: pageName         # 标题
 layout: pageName        # 模板,建议为标题或文件名，若以文章形式输出，layout 填写 about 并编辑该.md文件即可，无需下一步 。
-describe: pageName page # 描述
+describe: pageName      # 描述
 toc: *                  # 确定是否显示toc目录。
 comments: true          # 是否显示评论
 ---
@@ -157,8 +175,39 @@ layout: default
 footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即可，！请勿更改name！：
 
 ```yaml
+# 请不要填写太多否则会很丑。
+- name: twitter
+  url: https://twitter.com/yrmkejun
+
+- name: facebook
+  url: 
+
+- name: weibo
+  url: 
+
+- name: instagram
+  url: 
+
+- name: tumblr
+  url: 
+
 - name: github
-  url: http://gihub.com
+  url: https://github.com/KeJunMao
+
+- name: linkedin
+  url: 
+
+- name: zhihu
+  url: 
+
+- name: bilibili
+  url: 
+
+- name: telegram
+  url: 
+
+- name: gplus
+  url:
 ```
 
 若想要自定义顺序，你可以调整他们的整体顺序。
@@ -185,8 +234,8 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * disqus     # 完成,努力实现home和archive评论
 * toc        # 完成
 * 图像加载动画 # 完成
+* 搜索        # 完成，支持中文，能对文章标题，日期，标签搜索，不再依赖插件
 * 二次元化选项 # 二次元最棒惹～
-* 搜索        # 完成（仅支持英文），若需自定义，请访问：https://github.com/slashdotdash/jekyll-lunr-js-search
 
 ## License
 

@@ -27,9 +27,8 @@
       {% endif %} {% endif %} {% endfor %}
       <li class="nav-search">
           <div class="nav-search-wrapper">
-            <input id="nav-search"><i class="search material-icons">search</i>
-            <div id="nav-search-results" class="nav-search-results card">
-
+            <div>
+            <input class="cb-search-content" id="cb-search-content" placeholder="文章标题 日期 标签" ><i class="search material-icons">search</i>
             </div>
           </div>
         </li>
@@ -105,7 +104,7 @@
   <form action="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" method="get">
     <div class="input-field">
       <!--<input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">-->
-      <input id="search-query" type="search" required name="q" placeholder="Search" autocomplete="off">
+      <input class="cb-search-content" type="search" required name="q" placeholder="Search" autocomplete="off">
       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
       <i class="material-icons">close</i>
     </div>

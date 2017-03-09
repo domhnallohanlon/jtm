@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: KeJun | BLOG
+title: KeJun  BLOG
 email: kejun1997@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   二次元智障
@@ -35,5 +35,3 @@ disqus-shortname: blog-kejun-tk
 markdown: kramdown
 
 exclude: [vendor]
-
-gems: ['jekyll-lunr-js-search']
