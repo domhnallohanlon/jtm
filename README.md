@@ -46,11 +46,12 @@ theme: jekyll-theme-materialize
 
 ### 使用git
 
-  $ git clone https://github.com/KeJunMao/jekyll-theme-materialize.git
-  $ cd jekyll-theme-materialize
-  $ bundle install
-  $ bundle exec jekyll s -w
-
+```bash
+$ git clone https://github.com/KeJunMao/jekyll-theme-materialize.git
+$ cd jekyll-theme-materialize
+$ bundle install
+$ bundle exec jekyll s -w
+```
 ## 用法
 
 将如下内容添加到你Jekyll 的`_config.yml`文件中，请注意替换为你自己的信息：
