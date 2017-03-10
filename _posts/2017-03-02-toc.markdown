@@ -8,25 +8,42 @@ tags: test
 toc: a  #可填写任意内容
 comments: true
 ---
-[coding page](http://KeJun.coding.me/jekyll-theme-materialize-site/)
-[github page](https://kejunmao.github.io/jekyll-theme-materialize-site/)
+这个页面用于展示toc的效果，请使用pc或者平板设备插看。（暂不支持home文章显示toc）
 
 # jekyll-theme-materialize
 
+[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
+
+[![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+
+## 预览
+
+[coding page（中国）](http://kejun.coding.me/jekyll-theme-materialize/)
+[github page](https://kejunmao.github.io/jekyll-theme-materialize/)
+
 ## 安装
+
+有两种安装方法，一种是gem安装，另一种是`git clone`。
+
+> 建议您使用git clone的方法安装。
+
+### 使用gem
+
+若使用gem，您需要手动新建一些文件，和文件夹，如`links.md`、`_data`等
 
 添加下行到你 Jekyll 的 `Gemfile`文件中:
 
 ```ruby
+#安装主题
 gem "jekyll-theme-materialize"
 ```
 
 添加下行到你 Jekyll 的`_config.yml`文件中 :
 
 ```yaml
+#启用主题
 theme: jekyll-theme-materialize
 ```
-
 然后执行:
 
     $ bundle
@@ -35,6 +52,14 @@ theme: jekyll-theme-materialize
 
     $ gem install jekyll-theme-materialize
 
+### 使用git
+
+```bash
+$ git clone https://github.com/KeJunMao/jekyll-theme-materialize.git
+$ cd jekyll-theme-materialize
+$ bundle install
+$ bundle exec jekyll s -w
+```
 ## 用法
 
 将如下内容添加到你Jekyll 的`_config.yml`文件中，请注意替换为你自己的信息：
@@ -61,17 +86,66 @@ theme-color: {
 
 # mobile nav
 mobile-hp: /images/tx.jpg       # 头像
-mobile-bg: /images/userbg.png   # 背景
+mobile-bg: /images/userbg.png   # 背景,若填写theme则使用主题色。
+
+# disqus
+disqus-shortname: blog-kejun-tk #disqus shortname
+
+# cdn
+cdnurl: https://cdnurl.com/ #cdn
 ```
 每一个新的文章均需要添加如下yaml:
 
 ```yaml
 ---
 layout: post        # 指定模板
-categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。
+categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。请注意，每个文章仅支持一个分类。
 image:              # 图像，用于首页，若留空将以NoImage的形式显示
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
-toc: *           # 确定是否显示toc目录，默认为不显示。
+toc: *              # 确定是否显示toc目录，默认为不显示。
+comments: true      # 是否显示评论
+---
+```
+
+请注意jekyll根目录下的`.md`文件的`layout`与`_layout`文件下的文件对应.如：
+
+* `index.md`
+
+```yaml
+---
+layout: index
+---
+```
+
+* `links.md`
+
+```yaml
+---
+layout: links
+---
+```
+
+* `tags.md`
+
+```yaml
+---
+layout: tags
+---
+```
+
+* `about.md`
+
+```yaml
+---
+layout: about
+---
+```
+
+* `archive.md`
+
+```yaml
+---
+layout: archive
 ---
 ```
 
@@ -83,7 +157,9 @@ toc: *           # 确定是否显示toc目录，默认为不显示。
 ---
 title: pageName         # 标题
 layout: pageName        # 模板,建议为标题或文件名，若以文章形式输出，layout 填写 about 并编辑该.md文件即可，无需下一步 。
-describe: pageName page # 描述
+describe: pageName      # 描述
+toc: *                  # 确定是否显示toc目录。
+comments: true          # 是否显示评论
 ---
 ```
 
@@ -108,6 +184,47 @@ layout: default
   describe: Material Design爱好者
 ```
 
+footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即可，！请勿更改name！：
+
+```yaml
+# 请不要填写太多否则会很丑。
+- name: twitter
+  url: https://twitter.com/yrmkejun
+
+- name: facebook
+  url: 
+
+- name: weibo
+  url: 
+
+- name: instagram
+  url: 
+
+- name: tumblr
+  url: 
+
+- name: github
+  url: https://github.com/KeJunMao
+
+- name: linkedin
+  url: 
+
+- name: zhihu
+  url: 
+
+- name: bilibili
+  url: 
+
+- name: telegram
+  url: 
+
+- name: gplus
+  url:
+```
+
+若想要自定义顺序，你可以调整他们的整体顺序。
+
+
 ## 注意
 
 该主题引用的`gallery.min.opt.js`及`gallery-materialize.min.opt.css`文件并没有经过原开发者同意。若侵权，请告知并删除。
@@ -126,18 +243,12 @@ layout: default
 
 ## TODO
 
-* disqus     # 评论系统
+* disqus     # 完成
 * toc        # 完成
 * 图像加载动画 # 完成
+* 搜索        # 完成
 * 二次元化选项 # 二次元最棒惹～
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+* cdn 支持    # 完成
 
 ## License
 

@@ -31,7 +31,7 @@ gem "jekyll-theme-materialize"
 ```yaml
 #启用主题
 theme: jekyll-theme-materialize
-
+```
 然后执行:
 
     $ bundle
@@ -39,8 +39,6 @@ theme: jekyll-theme-materialize
 或手动执行:
 
     $ gem install jekyll-theme-materialize
-
-```
 
 ### 使用git
 
@@ -233,12 +231,12 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 
 ## TODO
 
-* disqus     # 完成,努力实现home和archive评论
+* disqus     # 完成
 * toc        # 完成
 * 图像加载动画 # 完成
-* 搜索        # 完成，支持中文，能对文章标题，日期，标签搜索，不再依赖插件
+* 搜索        # 完成
 * 二次元化选项 # 二次元最棒惹～
-* cdn 支持    # 先以七牛开始测试
+* cdn 支持    # 完成
 
 ## License
 

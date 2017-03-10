@@ -7,7 +7,7 @@ image:
 tags: test
 comments: true
 ---
-该文章用于测试markdown该文章用于测试markdown该文章用于测试markdown该文章用于测试markdown
+该文章用于展示markdown生成的格式。
 
 # Heading 1
 
@@ -20,18 +20,6 @@ comments: true
 ##### Heading 5
 
 ###### Heading 6
-
-# Heading 1 link
-
-## Heading 2 link
-
-### Heading 3 link
-
-#### Heading 4 link
-
-##### Heading 5 link
-
-###### Heading 6 link
 
 #### 标题（用底线的形式）Heading (underline)
 
