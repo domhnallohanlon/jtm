@@ -31,6 +31,9 @@ mobile-bg: /assets/images/userbg.png #若填写theme-color则使用theme-color�
 # disqus
 disqus-shortname: blog-kejun-tk
 
+# cdn
+cdnurl: https://jekyll-materialize.b0.upaiyun.com/
+
 # Build settings
 markdown: kramdown
 

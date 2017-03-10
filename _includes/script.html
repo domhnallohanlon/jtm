@@ -1,4 +1,5 @@
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+{% if site.cdnurl == "" %}
 <script type="text/javascript" src="{{ "/assets/js/materialize.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/jquery.scrollToTop.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/gallery.min.opt.js" | prepend: site.baseurl }}"></script>
@@ -6,7 +7,18 @@
 <script type="text/javascript" src="{{ "/assets/js/toc.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/assets/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
-<!--<script type="text/javascript" src="{{ "/assets/js/cb-search.js" | prepend: site.baseurl }}"></script>-->
+
+{% else %}
+<script type="text/javascript" src="{{ "/assets/js/materialize.min.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/jquery.scrollToTop.min.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/gallery.min.opt.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/jquery.lazyload.min.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/toc.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.cdnurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/bootstrap3-typeahead.min.js" | prepend: site.cdnurl }}"></script>
+{% endif %}
+
+
 <script>
    $(document).ready(function () {
         var time1 = 0;

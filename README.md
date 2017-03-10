@@ -4,8 +4,6 @@
 
 [![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
 
-[![jekyll-lunr-js-search Version](https://badge.fury.io/rb/jekyll-lunr-js-search.svg)](https://badge.fury.io/rb/jekyll-lunr-js-search)
-
 ## 预览
 
 [coding page（中国）](http://KeJun.coding.me/jekyll-theme-materialize-site/)
@@ -82,6 +80,9 @@ mobile-bg: /images/userbg.png   # 背景,若填写theme则使用主题色。
 
 # disqus
 disqus-shortname: blog-kejun-tk #disqus shortname
+
+# cdn
+cdnurl: https://cdnurl.com/ #cdn
 ```
 每一个新的文章均需要添加如下yaml:
 
