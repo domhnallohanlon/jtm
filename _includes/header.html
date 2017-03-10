@@ -55,7 +55,7 @@
   </div>
   <!-- 页面内的导航 -->
   {% if page.url != a %}
-  <div class="categories-wrapper {% case page.url %}{% when '/' %}green{% when '/about.html' %}red{% when '/archive.html' %}pink{% when '/links.html' %}purple{% when '/tags.html' %}blue{% else %}green{% endcase %} darken-1">
+  <div class="categories-wrapper {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %} darken-1">
     <div class="categories-container">
       <ul class="categories db">
         <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
@@ -67,7 +67,7 @@
   </div>
   {% endif %}
   {% if page.url == "/archive.html" %}
-  <div class="categories-wrapper {% case page.url %}{% when '/' %}green{% when '/about.html' %}red{% when '/archive.html' %}pink{% when '/links.html' %}purple{% when '/tags.html' %}blue{% else %}green{% endcase %} darken-1">
+  <div class="categories-wrapper {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %} darken-1">
     <div class="categories-container">
       <ul class="categories db">
         <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
