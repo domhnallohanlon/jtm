@@ -6,7 +6,7 @@
 
 ## 预览
 
-[coding page（中国）](http://KeJun.coding.me/jekyll-theme-materialize-site/)
+[coding page（中国）](http://kejun.coding.me/jekyll-theme-materialize/)
 [github page](https://kejunmao.github.io/jekyll-theme-materialize/)
 
 ## 安装
