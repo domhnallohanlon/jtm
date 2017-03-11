@@ -115,3 +115,6 @@
     .input-field div.card{
         width: 100%;
     }
+    div.gallery-header {
+        padding-bottom: 10px!important;
+    }

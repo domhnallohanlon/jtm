@@ -84,6 +84,10 @@ cdnurl: https://cdnurl.com/ #cdn
 
 #google_analytics
 google_analytics:
+#多个作者
+defaultAuthor: KeJun #默认作者
+defaultAuthorImage: assets/images/tx.jpg #默认作者头像
+manyAuthors: false
 ```
 每一个新的文章均需要添加如下yaml:
 
@@ -95,6 +99,7 @@ image:              # 图像，用于首页，若留空将以NoImage的形式显
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
 toc: *              # 确定是否显示toc目录，默认为不显示。
 comments: true      # 是否显示评论
+author:             # 作者名，请开启多作者功能，否则将以默认作者显示。
 ---
 ```
 
@@ -215,8 +220,19 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 
 若想要自定义顺序，你可以调整他们的整体顺序。
 
+当启用多作者 `manyAuthors: true` 后，您可以在文章yaml处指定作者，为了避免重复指定头像url，您必须在`_data/authors.yml`按如下格式设置：
 
-## 注意
+```yaml
+
+- name: Jekyll
+  image: assets/images/links/jianyuyouhun.jpg
+
+- name: Other
+  image: assets/images/links/halyul.png
+
+```
+
+## 注意1
 
 该主题引用的`gallery.min.opt.js`及`gallery-materialize.min.opt.css`文件并没有经过原开发者同意。若侵权，请告知并删除。
 
@@ -232,6 +248,12 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 |defaultColor |	Fallback color for when color thief fails. Default: '#444'|
 |fillScreen |	Enable the full width image transition style. Default: false|
 
+## 注意2
+
+目前，绝大多数本地url添加了前置`baseurl`，如果造成了无法引入的问题，请提出：
+
+<a class="github-button" href="https://github.com/KeJunMao/jekyll-theme-materialize/issues" data-icon="octicon-issue-opened" data-style="mega" data-count-api="/repos/KeJunMao/jekyll-theme-materialize#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue KeJunMao/jekyll-theme-materialize on GitHub">Issue</a>
+
 ## TODO
 
 * disqus     # 完成
@@ -241,6 +263,9 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * 二次元化选项 # 二次元最棒惹～
 * cdn 支持    # 完成
 * 统计        # 完成
+* 分享
+* 显示作者     #完成
+* 更好的主页
 
 ## License
 

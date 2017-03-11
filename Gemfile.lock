@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-materialize (0.0.9)
+    jekyll-theme-materialize (0.0.11)
       jekyll (~> 3.4)
 
 GEM

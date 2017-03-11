@@ -11,7 +11,15 @@ layout: default
             <div class="gallery-curve-wrapper">
               <div class="gallery-header">
                 <span>{{ post.title }}</span>
-                <p class="gray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+               <p class="gray-text text-lighten-4" style="margin-bottom: 0px;">
+                {% if site.manyAuthors %}
+<img  data-position="bottom" data-delay="50" data-tooltip="{% if post.author %}{{ post.author }}{% else %}{{ site.defaultAuthor }}{% endif %}"  class="right tooltipped" style="width: 18px;" src="{% for author in site.data.authors %}{% if author.name == post.author%}{{ author.image }}{%capture a %}{{ author.image }}{% endcapture %}{%endif%}{%endfor%}{% unless a %}{{ site.defaultAuthorImage }}{%endunless%}" alt="">
+                {%else%}
+<img  data-position="bottom" data-delay="50" data-tooltip="{{ site.defaultAuthor }}"  class="right tooltipped" style="width: 18px;" src="{{ site.defaultAuthorImage }}" alt="">
+                {% endif %}
+                   {{ post.date | date: "%b %-d, %Y" }}
+                   </p>
                 <hr>
                 <div id="postsContent">
                 {{ post.excerpt }}
@@ -55,7 +63,13 @@ layout: default
                 </a>
                 <div class="gallery-header">
                     <span>{{post.title}}</span>
-                    <p class="post-data datagray-text text-lighten-4" style="margin-bottom: 0px;">{{ post.date | date: "%b %-d, %Y" }}</p>
+                    <p class="post-data datagray-text text-lighten-4" style="margin-bottom: 0px;">
+                {% if site.manyAuthors %}
+<img  data-position="bottom" data-delay="50" data-tooltip="{% if post.author %}{{ post.author }}{% else %}{{ site.defaultAuthor }}{% endif %}"  class="right tooltipped" style="width: 18px;" src="{% for author in site.data.authors %}{% if author.name == post.author%}{{ author.image }}{%capture a %}{{ author.image }}{% endcapture %}{%endif%}{%endfor%}{% unless a %}{{ site.defaultAuthorImage }}{%endunless%}" alt="">
+                {%else%}
+<img  data-position="bottom" data-delay="50" data-tooltip="{{ site.defaultAuthor }}"  class="right tooltipped" style="width: 18px;" src="{{ site.defaultAuthorImage }}" alt="">
+                {% endif %}
+                        {{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
                 <div class="gallery-body">
                     <div id="postsContent" class="title-wrapper">

@@ -37,6 +37,14 @@ cdnurl: https://jekyll-materialize.b0.upaiyun.com/
 #google_analytics
 google_analytics:
 
+# 分享功能
+# todd
+
+#多个作者
+defaultAuthor: KeJun
+defaultAuthorImage: assets/images/tx.jpg
+manyAuthors: false
+
 # Build settings
 markdown: kramdown
 
