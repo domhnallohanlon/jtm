@@ -34,6 +34,9 @@ disqus-shortname: blog-kejun-tk
 # cdn
 cdnurl: https://jekyll-materialize.b0.upaiyun.com/
 
+#google_analytics
+google_analytics:
+
 # Build settings
 markdown: kramdown
 

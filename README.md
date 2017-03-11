@@ -81,6 +81,9 @@ disqus-shortname: blog-kejun-tk #disqus shortname
 
 # cdn
 cdnurl: https://cdnurl.com/ #cdn
+
+#google_analytics
+google_analytics:
 ```
 每一个新的文章均需要添加如下yaml:
 
@@ -237,6 +240,7 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * 搜索        # 完成
 * 二次元化选项 # 二次元最棒惹～
 * cdn 支持    # 完成
+* 统计        # 完成
 
 ## License
 
