@@ -26,7 +26,7 @@ theme-color: {
 } 
 # mobile nav
 mobile-hp: /assets/images/tx.jpg
-mobile-bg: /assets/images/userbg.png #若填写theme-color则使用theme-color的值。
+mobile-bg: theme #若填写theme则使用theme-color的值。
 
 # disqus
 disqus-shortname: blog-kejun-tk

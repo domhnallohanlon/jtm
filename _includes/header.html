@@ -95,6 +95,8 @@
       <div class="background">
               <img style="width:300px;height:160px;" src="{{ site.mobile-bg | prepend: site.baseurl }}">
       </div>
+      {% else %}
+      <div class="background {{ site.theme-color.default-color }}"></div>
       {% endif %}
       <a href="{{ site.baseurl }}/"><img class="circle" src="{{ site.mobile-hp | prepend: site.baseurl }}"></a>
       <a href="#!"><span class="white-text name">{{ site.title }}</span></a>
