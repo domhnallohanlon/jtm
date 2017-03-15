@@ -1,16 +1,25 @@
-
 - jekyll-theme-materialize
 	- [预览](#user-content-预览)
 	- [安装](#user-content-安装)
 		- [使用gem](#user-content-使用gem)
 		- [使用git](#user-content-使用git)
+	- [更新](#user-content-更新)
 	- [用法](#user-content-用法)
+		- [config](#user-content-config)
+		- [post](#user-content-post)
+		- [otherPage](#user-content-otherPage)
+		- [addPage](#user-content-addPage)
+		- [友情链接](#user-content-友情链接)
+		- [myherfs](#user-content-myherfs)
+		- [manyAuthors](#user-content-manyAuthors)
 	- [注意1](#user-content-注意1)
 	- [注意2](#user-content-注意2)
 	- [TODO](#user-content-todo)
 	- [License](#user-content-license)
 
 # jekyll-theme-materialize
+
+![](https://ooo.0o0.ooo/2017/03/15/58c9345cdcfdf.png)
 
 [![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
 
@@ -60,7 +69,15 @@ $ cd jekyll-theme-materialize
 $ bundle install
 $ bundle exec jekyll s -w
 ```
+## 更新
+
+    $ bundle
+
 ## 用法
+
+下面的内容能极大的帮助你使用本主题，请务必仔细阅读。
+
+### config
 
 将如下内容添加到你Jekyll 的`_config.yml`文件中，请注意替换为你自己的信息：
 
@@ -104,6 +121,9 @@ defaultAuthor: KeJun #默认作者
 defaultAuthorImage: assets/images/tx.jpg #默认作者头像
 manyAuthors: false
 ```
+
+### post
+
 每一个新的文章均需要添加如下yaml:
 
 ```yaml
@@ -117,6 +137,7 @@ comments: true      # 是否显示评论
 author:             # 若指定作者名，请开启多作者功能，否则将以默认作者显示。
 ---
 ```
+### otherPage
 
 请注意jekyll根目录下的`.md`文件的`layout`与`_layout`文件下的文件对应.如：
 
@@ -160,6 +181,8 @@ layout: archive
 ---
 ```
 
+### addPage
+
 如需新增page，建议按：
 
 * 根目录新建 `pageName.md`,并在头信息中键入如下：
@@ -186,6 +209,8 @@ layout: default
 
 > 你新增的页面将以`_config.yml`文件中的 `default-color` 作为主题色。如果你知道你在干什么，你也可以编辑`header`和`footer`。
 
+### 友情链接
+
 友情链接在`_data/links.yml`中，要删除或新增，请遵循如下格式：
 
 ```yaml
@@ -194,6 +219,8 @@ layout: default
   url: https://halyul.com/
   describe: Material Design爱好者
 ```
+
+### myherfs
 
 footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即可，！请勿更改name！：
 
@@ -235,6 +262,8 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 
 若想要自定义顺序，你可以调整他们的整体顺序。
 
+### manyAuthors
+
 当启用多作者 `manyAuthors: true` 后，您可以在文章yaml处指定作者，为了避免重复指定头像url，您必须在`_data/authors.yml`按如下格式设置：
 
 ```yaml
@@ -265,9 +294,7 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 
 ## 注意2
 
-目前，绝大多数本地url添加了前置`baseurl`，如果造成了无法引入的问题，请提出：
-
-<a class="github-button" href="https://github.com/KeJunMao/jekyll-theme-materialize/issues" data-icon="octicon-issue-opened" data-style="mega" data-count-api="/repos/KeJunMao/jekyll-theme-materialize#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue KeJunMao/jekyll-theme-materialize on GitHub">Issue</a>
+目前，绝大多数本地url添加了前置`baseurl`，如果造成了无法引入的问题，请提出：<a class="github-button" href="https://github.com/KeJunMao/jekyll-theme-materialize/issues">Issue</a>
 
 ## TODO
 
@@ -280,10 +307,11 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * 统计        # 完成
 * 分享
 * 显示作者     #完成
-* 更好的主页
 * post layout images点击放大出现的位置错误
-* home 和 arcguve 文章图片使用图床时的跨域问题（因为使用javascript优化了加载）
+* home 和 archive 文章图片使用图床时的跨域问题（因为使用javascript优化了加载）
 * 不依赖ruby gems的i18n
+* homepage,请看[demo](https://kejun.space/)
+* 配合homepage ，传入友链和links,当博客更新时，homepage也可以更新。请看[demo](https://kejun.space/#other)
 
 ## License
 
