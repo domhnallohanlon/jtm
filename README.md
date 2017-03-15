@@ -1,3 +1,15 @@
+
+- jekyll-theme-materialize
+	- [预览](#user-content-预览)
+	- [安装](#user-content-安装)
+		- [使用gem](#user-content-使用gem)
+		- [使用git](#user-content-使用git)
+	- [用法](#user-content-用法)
+	- [注意1](#user-content-注意1)
+	- [注意2](#user-content-注意2)
+	- [TODO](#user-content-todo)
+	- [License](#user-content-license)
+
 # jekyll-theme-materialize
 
 [![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
@@ -76,6 +88,9 @@ theme-color: {
 mobile-hp: /images/tx.jpg       # 头像
 mobile-bg: /images/userbg.png   # 背景,若填写theme则使用主题色。
 
+# header 背景图片
+header-bg: /assets/images/bg.png
+
 # disqus
 disqus-shortname: blog-kejun-tk #disqus shortname
 
@@ -99,7 +114,7 @@ image:              # 图像，用于首页，若留空将以NoImage的形式显
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
 toc: *              # 确定是否显示toc目录，默认为不显示。
 comments: true      # 是否显示评论
-author:             # 作者名，请开启多作者功能，否则将以默认作者显示。
+author:             # 若指定作者名，请开启多作者功能，否则将以默认作者显示。
 ---
 ```
 
@@ -260,12 +275,15 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * toc        # 完成
 * 图像加载动画 # 完成
 * 搜索        # 完成
-* 二次元化选项 # 二次元最棒惹～
+* 二次元化选项 
 * cdn 支持    # 完成
 * 统计        # 完成
 * 分享
 * 显示作者     #完成
 * 更好的主页
+* post layout images点击放大出现的位置错误
+* home 和 arcguve 文章图片使用图床时的跨域问题（因为使用javascript优化了加载）
+* 不依赖ruby gems的i18n
 
 ## License
 

@@ -5,6 +5,7 @@ date:   2017-1-18 17:42:06 +0800
 categories: KeJun
 image: /assets/images/demo1.jpg
 tags: kejun
+author: Jekyll
 ---
 
 你可以搜索`中文`二字以显示本文章。

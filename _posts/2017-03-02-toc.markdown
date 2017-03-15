@@ -5,10 +5,12 @@ date:   2017-03-04 10:42:06 +0800
 categories: NoImage
 image:
 tags: test
-toc: a  #可填写任意内容
+toc: 
 comments: true
 ---
 这个页面用于展示toc的效果，请使用pc或者平板设备插看。（暂不支持home文章显示toc）
+
+![](https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSMFynE3clrgzCU2ZDw9SDn5gM2JuwEsCE37Qf4S6uBlJljejEYWg)
 
 # jekyll-theme-materialize
 

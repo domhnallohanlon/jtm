@@ -5,7 +5,7 @@
   <meta name="theme-color" content="#4CAF50">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-{% unless site.cdnurl != "" %}
+{% unless site.cdn %}
   <link rel="icon" href="{{ site.icon-32x32 | prepend: site.baseurl }}" sizes="32x32">
   <link rel="icon" href="{{ site.icon-16x16 | prepend: site.baseurl }}" sizes="16x16">
 
