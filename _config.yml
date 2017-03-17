@@ -9,9 +9,9 @@
 title: materialeze theme
 email: kejun1997@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  二次元智障
+  Best Jekyll materialeze theme
 baseurl: "/jekyll-theme-materialize" # the subpath of your site, e.g. /blog
-url: "https://blog.kejun.tk/" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 # icon
 icon-16x16: /assets/images/icon/favicon-16x16.ico
 icon-32x32: /assets/images/icon/favicon-32x32.ico
@@ -25,7 +25,7 @@ theme-color: {
   tags-color: blue
 } 
 # mobile nav
-mobile-hp: /assets/images/tx.jpg
+mobile-hp: /assets/images/M.png
 mobile-bg: theme #若填写theme则使用theme-color的值。
 
 # header 背景图片

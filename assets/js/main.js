@@ -2,11 +2,15 @@
 $(document).ready(function () {
   //scrollToTop
   $("#toTop").scrollToTop();
+  $("#bodyToTop").scrollBodyToTop();
   // gallery
   $('.gallery-expand').galleryExpand({
     fillScreen: true,
     onShow: function (el) {
       // 沉浸状态栏
+      $("#toTop").css({
+        "display": 'none'
+      })
       var defaultColor = $("nav.nav-extended").css("background-color");
       var a = $("#placeholder-navbar").css("background-color");
       $("meta[name='theme-color']").attr('content', a);
@@ -15,6 +19,9 @@ $(document).ready(function () {
       });
       $("div#placeholder-overlay").click(function () {
         $("meta[name='theme-color']").attr('content', defaultColor);
+      })
+      $("#bodyToTop").css({
+        "background-color": a
       })
       // code 高亮边框色
       $("pre.highlight").css({

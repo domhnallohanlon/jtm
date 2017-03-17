@@ -71,16 +71,18 @@
     <div class="categories-container">
       <ul class="categories db">
         <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
+  {% assign postsNum = 0 %}
   {% for post in site.posts %}
-    {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-    {% capture x %}{{post | size }}{% endcapture %}
-    {% if year != y %}
-    {% assign year = y %}
-        
-        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ post | size }}篇文章" href="#{{ y }}">{{ y }}</a></li>
-
+    {% assign postsNum = postsNum | plus: 1 %}
+    {% assign thisYear = post.date | date: "%Y" %}
+    {% assign prevYear = post.previous.date | date: "%Y" %}
+    {% if thisYear != prevYear %}
+      {% if outYear != thisYear %}
+        {% assign outYear = thisYear %}
+          <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ postsNum }}篇文章" href="#{{ outYear }}">{{ outYear }}</a></li>
+      {% endif %}
+    {% assign postsNum = 0 %}
     {% endif %}
-
   {% endfor %}
         </ul>
     </div>
@@ -96,7 +98,9 @@
               <img style="width:300px;height:160px;" src="{{ site.mobile-bg | prepend: site.baseurl }}">
       </div>
       {% else %}
-      <div class="background {{ site.theme-color.default-color }}"></div>
+      <div class="background {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %}">
+        <div class="mobile-background-image" style="background-image: url('/jekyll-theme-materialize/assets/images/bg.png');"></div>
+      </div>
       {% endif %}
       <a href="{{ site.baseurl }}/"><img class="circle" src="{{ site.mobile-hp | prepend: site.baseurl }}"></a>
       <a href="#!"><span class="white-text name">{{ site.title }}</span></a>

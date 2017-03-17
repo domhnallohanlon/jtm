@@ -34,7 +34,7 @@
 
 有两种安装方法，一种是gem安装，另一种是`git clone`。
 
-> 建议您使用git clone的方法安装。
+> 主题正在开发阶段建议您使用git clone的方法安装，这样您可以获取最新开发版本，而gem版本是略微稳定或新功能推出、已知bug修复的版本。
 
 ### 使用gem
 
@@ -129,8 +129,10 @@ manyAuthors: false
 ```yaml
 ---
 layout: post        # 指定模板
+title:  "toc test"
+date:   2017-03-04 10:42:06 +0800
 categories: NoImage # 分类，首页显示,该项经常用于检测是否为post。请注意，每个文章仅支持一个分类。
-image:              # 图像，用于首页，若留空将以NoImage的形式显示
+image:              # 图像，用于首页，若留空将以NoImage的形式显示, 暂不支持跨域图像。
 tags: jekyll ubuntu # 标签，用于tags页面，允许多个
 toc: *              # 确定是否显示toc目录，默认为不显示。
 comments: true      # 是否显示评论
@@ -304,14 +306,14 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * 搜索        # 完成
 * 二次元化选项 
 * cdn 支持    # 完成
-* 统计        # 完成
+* google analytics        # 完成
 * 分享
 * 显示作者     #完成
 * post layout images点击放大出现的位置错误
 * home 和 archive 文章图片使用图床时的跨域问题（因为使用javascript优化了加载）
 * 不依赖ruby gems的i18n
-* homepage,请看[demo](https://kejun.space/)
-* 配合homepage ，传入友链和links,当博客更新时，homepage也可以更新。请看[demo](https://kejun.space/#other)
+* homepage,请看[demo](https://kejun.space/)，[仓库地址](https://coding.net/u/KeJun/p/homepage/git)。
+* 配合homepage ，传入友链和links,当博客更新时，homepage也可以更新。请看[demo](https://kejun.space/#other),[json](https://coding.net/u/KeJun/p/myblog/git/blob/master/assets/postsAndLinks.json)。
 
 ## License
 
