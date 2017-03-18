@@ -98,7 +98,13 @@ $(document).ready(function () {
   if($('#toc').css("display") == "none"){
     $("div.toc").removeClass( "m9 l10" );
   }
-
+  $(window).resize(function(){
+  if (window.innerWidth <= 600){
+    $("#main").removeClass("db");
+  }else {
+    $("#main").addClass("db");
+  }
+  });
 });
 // 评论
 var disqus = {
