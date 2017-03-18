@@ -49,6 +49,9 @@ defaultAuthor: KeJun
 defaultAuthorImage: assets/images/tx.jpg
 manyAuthors: true
 
+# 是否使用gallery
+gallery: false
+
 # Build settings
 markdown: kramdown
 

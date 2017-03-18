@@ -9,7 +9,7 @@ layout: default
             {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
             {% assign year = y %}
             {{ y }}
-         ce"><div class="placeholder">
+         ce" data-url="{{ post.url | prepend: site.baseurl }}"><div class="placeholder">
             <div class="gallery-curve-wrapper">
               <div class="gallery-header">
                 <span>{{ post.title }}</span>
@@ -23,6 +23,7 @@ layout: default
                 <hr>
                 <div id="postsContent">{{ post.excerpt }}</div>
               </div>
+              {% if site.gallery %}
               <div class="gallery-body">
                 <div class="title-wrapper">
                   <h3>{{ post.title }}</h3>
@@ -31,6 +32,7 @@ layout: default
                     {{ post.content }}
                 </div>
               </div>
+              {% endif %}
               <div class="gallery-action">
                 <!--<a class="btn-floating btn-large waves-effect waves-light pink"><i class="material-icons">favorite</i></a>-->
               </div>
@@ -42,7 +44,7 @@ layout: default
             {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
             {% assign year = y %}
             {{ y }}
-     ce" data-fillscreen="true">
+     ce" data-fillscreen="true" data-url="{{ post.url | prepend: site.baseurl }}">
         <div class="placeholder">
             <div class="gallery-curve-wrapper">
                 <a class="gallery-cover gray" style="height: 300px;">
@@ -73,6 +75,7 @@ layout: default
                 {% endif %}
                         {{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
+                {% if site.gallery %}
                 <div class="gallery-body">
                     <div id="postsContent" class="title-wrapper">
                         <h3>{{post.title}}</h3>
@@ -81,6 +84,7 @@ layout: default
                     {{ post.content }}
                     </div>
                 </div>
+                {% endif %}
                 <div class="gallery-action">
                     <!--<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>-->
                 </div>

@@ -116,10 +116,14 @@ cdnurl: https://cdnurl.com/ #cdn
 
 #google_analytics
 google_analytics:
+
 #多个作者
 defaultAuthor: KeJun #默认作者
 defaultAuthorImage: assets/images/tx.jpg #默认作者头像
 manyAuthors: false
+
+# 是否使用gallery
+gallery: false
 ```
 
 ### post
@@ -314,6 +318,7 @@ footer的各种站点URL,请按如下格式填写至`_data/myherfs.yml`的url即
 * 不依赖ruby gems的i18n
 * homepage,请看[demo](https://kejun.space/)，[仓库地址](https://coding.net/u/KeJun/p/homepage/git)。
 * 配合homepage ，传入友链和links,当博客更新时，homepage也可以更新。请看[demo](https://kejun.space/#other),[json](https://coding.net/u/KeJun/p/myblog/git/blob/master/assets/postsAndLinks.json)。
+* gallery 开启与关闭。# 完成
 
 ## License
 
