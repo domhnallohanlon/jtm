@@ -27,7 +27,7 @@
 
 [![discord](https://img.shields.io/badge/discord-jekyll--theme--materialize-blue.svg)](https://discord.gg/JnaQkfz)
 
-[![qq](https://img.shields.io/badge/QQ%20Group-Jekyll%20Materialize-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=9585312e5f0aa9aa3665f9890a35d3741dcc8e1c0aff78fbd30844ca0da2d6e9)
+[![qq](https://img.shields.io/badge/QQ%20Group-Jekyll%20Materialize-blue.svg)](https://jq.qq.com/?_wv=1027&k=46Ds7oY)
 
 ## 预览
 
