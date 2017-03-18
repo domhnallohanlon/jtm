@@ -98,6 +98,9 @@ $(document).ready(function () {
   if($('#toc').css("display") == "none"){
     $("div.toc").removeClass( "m9 l10" );
   }
+    if (window.innerWidth <= 600 && $(".card-panel")){
+    $("#main").removeClass("db");
+  }
   $(window).resize(function(){
   if (window.innerWidth <= 600){
     $("#main").removeClass("db");

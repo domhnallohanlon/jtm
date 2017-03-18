@@ -9,7 +9,7 @@
 title: materialeze theme
 email: kejun1997@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Best Jekyll materialeze theme
+  Best Jekyll materialize theme
 baseurl: "/jekyll-theme-materialize" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 # icon

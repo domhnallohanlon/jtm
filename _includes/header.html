@@ -99,7 +99,7 @@
       </div>
       {% else %}
       <div class="background {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %}">
-        <div class="mobile-background-image" style="background-image: url('/jekyll-theme-materialize/assets/images/bg.png');"></div>
+        <div class="mobile-background-image" style="background-image: url('{{"/assets/images/bg.png" | prepend: site.baseurl}}');"></div>
       </div>
       {% endif %}
       <a href="{{ site.baseurl }}/"><img class="circle" src="{{ site.mobile-hp | prepend: site.baseurl }}"></a>
@@ -120,6 +120,7 @@
     <div class="divider"></div>
   </li>
   <li><a class="subheader">Pages</a></li>
+  <li><a class="waves-effect tooltipped" data-position="right" data-delay="50" data-tooltip="Home" href="{{ site.baseurl }}/">Home</a></li>
   {% for my_page in site.pages %} {% if my_page.title %}
   <li><a class="waves-effect tooltipped" data-position="right" data-delay="50" data-tooltip="{{ my_page.title }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
   {% endif %} {% endfor %}

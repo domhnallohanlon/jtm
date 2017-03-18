@@ -21,9 +21,13 @@
 
 ![](https://ooo.0o0.ooo/2017/03/15/58c9345cdcfdf.png)
 
-[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
+[![Build Status](https://travis-ci.org/KeJunMao/jekyll-theme-materialize.svg?branch=master?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-materialize)
 
 [![jekyll-theme-materialize Version](https://badge.fury.io/rb/jekyll-theme-materialize.svg)](https://badge.fury.io/rb/jekyll-theme-materialize)
+
+[![discord](https://img.shields.io/badge/discord-jekyll--theme--materialize-blue.svg)](https://discord.gg/JnaQkfz)
+
+[![qq](https://img.shields.io/badge/QQ%20Group-Jekyll%20Materialize-blue.svg)](https://shang.qq.com/wpa/qunwpa?idkey=9585312e5f0aa9aa3665f9890a35d3741dcc8e1c0aff78fbd30844ca0da2d6e9)
 
 ## 预览
 
@@ -91,7 +95,7 @@ url: "https://blog.kejun.tk/"
 icon-16x16: images/icon/favicon-16x16.ico
 icon-32x32: images/icon/favicon-32x32.ico
 
-# theme color
+# theme color ,具体的值请参考http://materializecss.com/color.html
 theme-color: { 
   default-color: green, 
   home-color: green,
