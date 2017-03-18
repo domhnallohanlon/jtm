@@ -47,11 +47,14 @@
         }).error(function(data, b) { console.log("json解析错误，搜索功能暂不可用，请检查文章title，确保不含有换行等特殊符号"); });
             {% unless site.gallery %}
                 var posts = $("div.gallery-item");
+                if (posts.attr("data-url")){
                 posts.unbind();
                 posts.click(function(){
                     var postUrl = $(this).attr("data-url")
                     window.location.href=postUrl;
                 })
+                }
+
             {% endunless %}
     });
 
