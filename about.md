@@ -3,12 +3,11 @@ layout: about
 title: About
 describe: about page
 ---
-## 关于主题
+## What are Extensions
 
-打造最好的jekyll Material Theme
-
-欢迎测试，并提出宝贵的issues。
+Simple explanation
 
 
+## How to Install an Extension
 
-欢迎开发者共同[参与](https://github.com/KeJunMao/jekyll-theme-materialize)。
+10 step walk through

@@ -2,7 +2,7 @@
 layout: post
 title:  "中文"
 date:   2017-1-18 17:42:06 +0800
-categories: KeJun
+categories: Jekyll
 image: /assets/images/demo1.jpg
 tags: kejun
 author: Jekyll

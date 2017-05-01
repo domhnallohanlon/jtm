@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-01-18 17:42:06 +0800
-categories: NoImage
+categories: Jekyll
 image:
 tags: jekyll ubuntu
 author: halyul

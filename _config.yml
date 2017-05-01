@@ -10,7 +10,7 @@ title: materialeze theme
 email: kejun1997@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Best Jekyll materialize theme
-baseurl: "/jekyll-theme-materialize" # the subpath of your site, e.g. /blog
+baseurl: "/jtm" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 # icon
 icon-16x16: /assets/images/icon/favicon-16x16.ico
@@ -35,8 +35,8 @@ header-bg: /assets/images/bg.png
 disqus-shortname: blog-kejun-tk
 
 # cdn
-cdn: false
-cdnurl: https://jekyll-materialize.b0.upaiyun.com/
+#cdn: false
+#cdnurl: https://jekyll-materialize.b0.upaiyun.com/
 
 #google_analytics
 google_analytics:
