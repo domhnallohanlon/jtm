@@ -58,9 +58,9 @@
   <div class="categories-wrapper {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %} darken-1">
     <div class="categories-container">
       <ul class="categories db">
-        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
+        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }} Posts" href="#all">All</a></li>
         {% for category in site.categories %}
-        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ category | last | size }}篇文章" href="#{{ category | first }}">{{ category | first }}</a></li>
+        <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ category | last | size }} Posts" href="#{{ category | first }}">{{ category | first }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -70,7 +70,7 @@
   <div class="categories-wrapper {% case page.url %}{% when '/' %}{{ site.theme-color.home-color }}{% when '/about.html' %}{{ site.theme-color.about-color }}{% when '/archive.html' %}{{ site.theme-color.archive-color }}{% when '/links.html' %}{{ site.theme-color.links-color }}{% when '/tags.html' %}{{ site.theme-color.tags-color }}{% else %}{{ site.theme-color.default-color }}{% endcase %} darken-1">
     <div class="categories-container">
       <ul class="categories db">
-        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }}篇文章" href="#all">All</a></li>
+        <li class="k"><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ site.posts | size }} Posts" href="#all">All</a></li>
   {% assign postsNum = 0 %}
   {% for post in site.posts %}
     {% assign postsNum = postsNum | plus: 1 %}
@@ -79,7 +79,7 @@
     {% if thisYear != prevYear %}
       {% if outYear != thisYear %}
         {% assign outYear = thisYear %}
-          <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ postsNum }}篇文章" href="#{{ outYear }}">{{ outYear }}</a></li>
+          <li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{ postsNum }} Posts" href="#{{ outYear }}">{{ outYear }}</a></li>
       {% endif %}
     {% assign postsNum = 0 %}
     {% endif %}

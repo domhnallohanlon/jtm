@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Dialogs Extension
 categories: Design
 feature_text: |

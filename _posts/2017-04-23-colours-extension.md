@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Colours Extension
 categories: Design
 feature_text: |
